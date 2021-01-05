@@ -16,9 +16,7 @@ const handleSubmit = (e) => {
   setComment('');
   addRecom(firstName, lastName, comment);
 
-  console.log(firstName);
-  console.log(lastName);
-  console.log(comment);
+  setModalOpen(false);
 }
   
 
@@ -45,7 +43,14 @@ const handleSubmit = (e) => {
 
   return(
     <>
-      <button onClick={handleModalOpen} className='btn-modal-trigger'><i className='fas fa-pen'></i></button>
+      <div className='comment-header'>
+        <div className='comment-header-text'>
+          <h2>Write a Recommendation</h2>
+        </div>
+        <div className='comment-header-btn'>
+          <button onClick={handleModalOpen} className='btn-modal-trigger'><i className='fas fa-pen'></i></button>
+        </div>
+      </div>
       <div className='modal-container'>
         <Modal isOpen={modalOpen} onRequestClose={handleModalClose} className='modal-body' style={modalStyle}>
           <div className='modal-header'>

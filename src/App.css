@@ -30,14 +30,9 @@ body {
   background-color: var(--bg-primary);
 }
 
-/* h1,
-h2,
-h3,
-h4,
-h5 {
-  margin: 0;
-  padding: 0;
-} */
+button:focus {
+  outline: none;
+}
 
 a {
   text-decoration: none;

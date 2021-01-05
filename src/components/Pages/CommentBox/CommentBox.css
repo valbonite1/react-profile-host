@@ -1,38 +1,52 @@
 /* Comment Container */
 
 .comment-section {
-  width: 100%;
-  min-height: 40vh;
-  padding: 1rem;
+  max-width: 95vw;
+  padding: 2rem;
+  margin: 0 auto;
 }
 
-.comment-header > h2 {
+.comment-header-text > h2 {
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  display: flex;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 1rem;
 }
 
 /* Comment Item */
 
-.comment-list {
+ul.comment-list {
   width: 100%;
-  height: 20%;
-  background-color: #fff;
-  border: solid 1px black;
-  padding: 0.5rem;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.comment-list li {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 1rem;
 }
 
 .comment-icon {
-  width: 8%;
+  width: 10%;
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .fa-user-circle {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: var(--text-primary);
 }
 
 .comment-content {
@@ -40,9 +54,14 @@
   height: 100%;
 }
 
+.comment-text > p {
+  word-wrap: break-word;
+  margin-bottom: 0.5rem;
+}
 .comment-name {
   height: 20%;
   display: flex;
+  margin-bottom: 0.5rem;
 }
 
 .comment-name > h2 {
@@ -160,11 +179,6 @@
   border: #3f939b;
 }
 
-.btn-write:focus,
-.btn-modal-trigger:focus {
-  outline: none;
-}
-
 .btn-cancel {
   width: 4rem;
   height: 2rem;
@@ -186,8 +200,48 @@
   background-color: var(--bg-primary);
   color: var(--text-primary);
   border: solid 3px var(--text-primary);
-  margin-right: 0.8rem;
   cursor: pointer;
-  margin-top: 1rem;
   font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+
+.comment-btn {
+  vertical-align: center;
+}
+
+.btn-edit {
+  background-color: none;
+  border: none;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.fa-edit {
+  color: rgb(0, 99, 0);
+}
+
+.btn-trash {
+  background-color: none;
+  border: none;
+  cursor: pointer;
+}
+
+.fa-trash-alt {
+  color: rgb(161, 0, 0);
+}
+
+@media screen and (min-width: 768px) {
+  .comment-section {
+    max-width: 90vw;
+  }
+  .comment-icon {
+    width: 5%;
+  }
+
+  .modal-body {
+    max-width: 45vw;
+  }
 }

@@ -7,9 +7,6 @@ const CommentBox = () => {
   return(
     <>
       <div className='comment-section'>
-        <div className='comment-header'>
-          <h2>Write a Recommendation</h2>
-        </div>
         <CommentItem />
       </div>
     </>
