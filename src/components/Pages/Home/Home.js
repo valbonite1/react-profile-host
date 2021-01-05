@@ -4,8 +4,7 @@ import About from '../About/About';
 import Education from '../Education/Education';
 import Hobbies from '../Hobbies/Hobbies';
 import Work from '../Work/Work';
-import Comment from '../Comment/Comment';
-import Recommendation from '../Dummy/Recommendation';
+import CommentBox from '../CommentBox/CommentBox';
 
 const Home = () => {
   return(
@@ -15,8 +14,7 @@ const Home = () => {
       <Education />
       <Hobbies />
       <Work />
-     {/*  <Comment /> */}
-      <Recommendation />
+      <CommentBox />
     </>
   );
 }

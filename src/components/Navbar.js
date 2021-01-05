@@ -59,7 +59,7 @@ const Navbar = () => {
                         <a href="https://twitter.com/valbonite" target='_blank' style={iconStyle}><i className='fab fa-twitter'></i></a>
                     </li>
                     <li className='nav-social'>
-                        <a href="https://www.linkedin.com/in/valbonite/" target='_blank' style={iconStyle}><i className='	fab fa-linkedin-in'></i></a>
+                        <a href="https://www.linkedin.com/in/valbonite/" target='_blank' style={iconStyle}><i className='fab fa-linkedin-in'></i></a>
                     </li>
                 </ul>
             </div>

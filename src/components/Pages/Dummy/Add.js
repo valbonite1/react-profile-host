@@ -40,6 +40,19 @@ class Add extends Component {
     localStorage.setItem('recommendation', JSON.stringify(recommendation));
   }
 
+  componentDidUpdate() {
+
+    const persistState = localStorage.getItem('recommendation');
+
+    if (persistState) {
+      try {
+        this.setState(JSON.parse(persistState));
+      } catch (e) {
+        // is not json
+      }
+    }
+  }
+
 
   render() {
     const { name, username } = this.state.form

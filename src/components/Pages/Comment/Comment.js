@@ -2,12 +2,27 @@ import React from 'react';
 import './Comment.css';
 
 class Comment extends React.Component {
-  constructor(props) {
-    super(props);
+  state = users = [{
+    firstName: '',
+    lastName: '',
+    comments: ''
+  }]
 
-    this.state = {
-      firstName: '',
-      lastName: ''
+  componentDidMount(){
+    try {
+      const json = localStorage.getItem('users');
+      const userData = JSON.parse(json);
+
+      if(users){
+          this.setState(() => ({userData}));
+      }
+    } catch (error) {}      
+  }
+
+  componentDidUpdate(prevProps, prevState){
+      if(prevState.users.length !== this.initialState.length){
+        const json = JSON.stringify(this.state.users); 
+        localStorage.setItem('users', json);
     }
   }
 
@@ -32,6 +47,7 @@ class Comment extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
   }
+
 
   render() {
     return(

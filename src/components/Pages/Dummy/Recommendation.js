@@ -7,31 +7,30 @@ import View from './View';
 class Recommendation extends Component {
   initialState = {
     users: [
-      { name: 'Tania', username: 'floppydiskette' },
-      { name: 'Timm', username: 'zeitgeist' },
-      { name: 'Craig', username: 'val bonite' },
-      
+      {
+        name: '',
+        username: ''
+      }
     ],
     results: [],
     query: ''
-
     
   }
   
   
   state = this.initialState
 
- /*  componentDidMount() {
-    const data = JSON.parse(localStorage.getItem('recommendation') || '[]');
-    this.setState({initialState: data});
-  }
- */
+  
 
-/*   componentDidUpdate(prevProps, prevState) {
+    /* const data = JSON.parse(localStorage.getItem('recommendation') || '[]');
+    this.setState({initialState: data}); */
+
+
+  componentDidUpdate(prevProps, prevState) {
     if (prevState.users !== this.state.users) {
       this.resetSearch()
     }
-  } */
+  }
 
   search = event => {
     const { users } = this.state
@@ -91,6 +90,7 @@ class Recommendation extends Component {
   render() {
     const { users, results, query } = this.state
     const data = results.length === 0 && !query ? users : results
+    /* const data = JSON.parse(localStorage.getItem('recommendation') || '[]'); */
 
     return (
       <Container>
