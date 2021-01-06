@@ -12,3 +12,8 @@
       *ito yung gamit ko para may id generator. when displaying an array of data kasi, need may special and unique key each item/object in the array. kaya this will help generate a unique key for every array
       *You can do this by typing           yarn add uuid
       *import mo as                   import { v4 as uuidv4 } from 'uuid';
+
+-------------------FOR CSS (CommentBox.css)---------------------
+
+1.) Explain ko lang pano mo maedit yung modal
+2.) You will see a lot of variables especially sa 'color:' and 'background-color:' properties. Just change it to the variables you want.  

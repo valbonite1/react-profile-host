@@ -20,6 +20,7 @@
 }
 
 /* Comment Item */
+/* ito yung part ng css that handles each comment item. so you can edit the selector names here and how it should look like. */
 
 ul.comment-list {
   width: 100%;
@@ -83,6 +84,7 @@ ul.comment-list {
 
 /* Modal Style */
 
+/* ito yung selector na magchchange ng position ng modal. if wala yung --after-open, yan yung selector niya if nakaclose pa */
 .ReactModal__Overlay--after-open {
   width: 100%;
   height: 100%;
@@ -91,11 +93,14 @@ ul.comment-list {
   align-items: center;
 }
 
+/* this just removes the black outline when you are selecting a specific part */
+
 .ReactModal__Overlay--after-open:focus,
 .modal-body:focus {
   outline: none;
 }
 
+/* this is where you can edit how the modal will look*/
 .modal-body {
   width: 80%;
   background-color: var(--bg-primary);
